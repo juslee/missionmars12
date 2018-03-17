@@ -42,14 +42,10 @@ server.post('/api/tickets', require('./ticketsApi'));
 /*----------------------------------------------------------------------------------------
 * Mission 2: How to create a Luis Recognizer
 * ---------------------------------------------------------------------------------------- */
-var luisRecognizer = 
-    new builder.LuisRecognizer(process.env.LuisModelUrl).onEnabled(
-        (context, callback) => {
-            var enabled = context.dialogStack().length === 0;
-            callback(null, enabled);
-        }
-    );
-bot.recognizer(luisRecognizer);
+//var luisRecognizer = 
+//    new builder.LuisRecognizer().onEnabled(
+//    ); 
+//bot.recognizer(luisRecognizer);
 //////////////////////////////////////////////////////////////////////////////////////////
 
 bot.dialog('Help',
